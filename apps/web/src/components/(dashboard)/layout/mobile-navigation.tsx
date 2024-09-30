@@ -3,10 +3,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-
 import { signOut } from 'next-auth/react';
 
-import LogoImage from 'static/logo.png';
+const LogoImage = 'public/static/logo.png';
 
 import { getRootHref } from '@documenso/lib/utils/params';
 import { Sheet, SheetContent } from '@documenso/ui/primitives/sheet';
@@ -27,22 +26,10 @@ export const MobileNavigation = ({ isMenuOpen, onMenuOpenChange }: MobileNavigat
   const rootHref = getRootHref(params, { returnEmptyRootString: true });
 
   const menuNavigationLinks = [
-    {
-      href: `${rootHref}/documents`,
-      text: 'Documents',
-    },
-    {
-      href: `${rootHref}/templates`,
-      text: 'Templates',
-    },
-    {
-      href: '/settings/teams',
-      text: 'Teams',
-    },
-    {
-      href: '/settings/profile',
-      text: 'Settings',
-    },
+    { href: `${rootHref}/documents`, text: 'Documents' },
+    { href: `${rootHref}/templates`, text: 'Templates' },
+    { href: '/settings/teams', text: 'Teams' },
+    { href: '/settings/profile', text: 'Settings' },
   ];
 
   return (
