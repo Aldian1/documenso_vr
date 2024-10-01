@@ -5,7 +5,7 @@ import { type HTMLAttributes, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { usePathname } from 'next/navigation';
-import {Image} from 'next/image';
+import Image from 'next/image';
 import { MenuIcon, SearchIcon } from 'lucide-react';
 
 import type { GetTeamsResponse } from '@documenso/lib/server-only/team/get-teams';
