@@ -13,7 +13,7 @@ import { getRootHref } from '@documenso/lib/utils/params';
 import type { User } from '@documenso/prisma/client';
 import { cn } from '@documenso/ui/lib/utils';
 
-import { Logo } from '~/components/branding/logo.png';
+import  Logo  from '~/components/branding/logo.png';
 
 import { CommandMenu } from '../common/command-menu';
 import { DesktopNav } from './desktop-nav';
