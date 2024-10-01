@@ -5,7 +5,7 @@ import { type HTMLAttributes, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { usePathname } from 'next/navigation';
-
+import {Image} from 'next/image';
 import { MenuIcon, SearchIcon } from 'lucide-react';
 
 import type { GetTeamsResponse } from '@documenso/lib/server-only/team/get-teams';
@@ -13,7 +13,7 @@ import { getRootHref } from '@documenso/lib/utils/params';
 import type { User } from '@documenso/prisma/client';
 import { cn } from '@documenso/ui/lib/utils';
 
-import { Logo } from '~/components/branding/logo';
+import { Logo } from '~/components/branding/logo.png';
 
 import { CommandMenu } from '../common/command-menu';
 import { DesktopNav } from './desktop-nav';
@@ -68,7 +68,7 @@ export const Header = ({ className, user, teams, ...props }: HeaderProps) => {
           href={`${getRootHref(params, { returnEmptyRootString: true })}/documents`}
           className="focus-visible:ring-ring ring-offset-background hidden rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 md:inline"
         >
-         <img src="~/components/branding/logo.png" alt="Logo" />
+         <Image src={Logo} alt="Logo" />
         </Link>
 
         <DesktopNav setIsCommandMenuOpen={setIsCommandMenuOpen} />
